@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Navbar.css';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import ShoppingCartIcon from '../images/cart.png';
 
 
 function Navbar() {
@@ -18,24 +19,26 @@ function Navbar() {
 
             <div className="navbar-nav">
 
-                <div className="navbar-option">
-                    <span className="navbar-option-line-1">Hello Guest</span>
-                    <span className="navbar-option-line-2">Sign In</span>
+                <div className="navbar-links">
+                    <span className="navbar-links-line-1">Hello Guest</span>
+                    <span className="navbar-links-line-2">Sign In</span>
                 </div>
 
-                <div className="navbar-option">
-                    <span className="navbar-option-line-1">Returns</span>
-                    <span className="navbar-option-line-2">& Orders</span>
+                <div className="navbar-links">
+                    <span className="navbar-links-line-1">Returns</span>
+                    <span className="navbar-links-line-2">& Orders</span>
                 </div>
 
-                <div className="navbar-option">
-                    <span className="navbar-option-line-1">Your</span>
-                    <span className="navbar-option-line-2">Prime</span>
+                <div className="navbar-links">
+                    <span className="navbar-links-line-1">Your</span>
+                    <span className="navbar-links-line-2">Prime</span>
                 </div>
                 
-                <div className="navbar-option-basket">
-                    <ShoppingBasketIcon />
-                    <span className="navbar-option-line-2 navbar-basket-count">0</span>
+                <div className="navbar-cart">
+                    {/* <ShoppingBasketIcon /> */}
+                    <img src={ShoppingCartIcon} alt="Shopping Cart" className="navbar-cart-icon" />
+                    <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
+                    <span className="navbar-cart-count">0</span>
                 </div>
 
             </div>
