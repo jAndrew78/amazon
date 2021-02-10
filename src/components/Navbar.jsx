@@ -34,7 +34,7 @@ function Navbar() {
                 </div>
                 
                 <div className="navbar-cart">
-                    <img src={ShoppingCartIcon} alt="Shopping Cart" className="navbar-cart-icon" />
+                    <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                     <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
                     <span className="navbar-cart-count">0</span>
                 </div>
