@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Navbar.css';
 import SearchIcon from '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import ShoppingCartIcon from '../images/cart.png';
 
 
@@ -35,7 +34,6 @@ function Navbar() {
                 </div>
                 
                 <div className="navbar-cart">
-                    {/* <ShoppingBasketIcon /> */}
                     <img src={ShoppingCartIcon} alt="Shopping Cart" className="navbar-cart-icon" />
                     <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
                     <span className="navbar-cart-count">0</span>
