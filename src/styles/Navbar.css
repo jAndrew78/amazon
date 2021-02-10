@@ -38,13 +38,13 @@
     background-color: #FFA500;
 }
 
-.navbar-nav {
+.navbar-links {
     display: flex;
     justify-content: space-evenly;
     margin: 0 15px;
 }
 
-.navbar-links {
+.navbar-links-section {
     display: flex;
     flex-direction: column;
     margin-left: 10px;

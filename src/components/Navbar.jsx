@@ -17,19 +17,19 @@ function Navbar() {
                 <SearchIcon className="navbar-search-icon" />  
             </div>
 
-            <div className="navbar-nav">
+            <div className="navbar-links">
 
-                <div className="navbar-links">
+                <div className="navbar-links-section">
                     <span className="navbar-links-line-1">Hello Guest</span>
                     <span className="navbar-links-line-2">Sign In</span>
                 </div>
 
-                <div className="navbar-links">
+                <div className="navbar-links-section">
                     <span className="navbar-links-line-1">Returns</span>
                     <span className="navbar-links-line-2">& Orders</span>
                 </div>
 
-                <div className="navbar-links">
+                <div className="navbar-links-section">
                     <span className="navbar-links-line-1">Your</span>
                     <span className="navbar-links-line-2">Prime</span>
                 </div>
