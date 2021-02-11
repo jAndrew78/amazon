@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Product.css';
 
-import AirPods from '../images/airpods.png';
+// IMAGES
+import AirPods from './utils/images/products/airpods.png';
 
 
 function Product() {
