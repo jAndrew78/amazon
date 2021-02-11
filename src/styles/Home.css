@@ -14,5 +14,5 @@
 
 .home-row {
     display: flex;
-    margin-bottom: 20px;
+    margin: 0 12.5px 20px 12.5px;
 }
