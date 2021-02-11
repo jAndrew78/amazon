@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/Navbar.css';
+
+// IMAGES
 import SearchIcon from '@material-ui/icons/Search';
-import ShoppingCartIcon from '../images/cart.png';
+import ShoppingCartIcon from './utils/images/misc/cart.png';
 
 
 function Navbar() {
