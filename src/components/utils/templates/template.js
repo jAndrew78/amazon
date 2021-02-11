@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Template.css';
+// import '../styles/Template.css';
 
 
 function Template() {
