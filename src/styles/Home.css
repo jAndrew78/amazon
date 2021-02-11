@@ -1,9 +1,11 @@
-/* .home { */
+.home {
+    background-color: #F0F0F0;
+
     /* display: flex; */
     /* justify-content: center; */
     /* margin: 0 auto; */
     /* max-width: 1500px; */
-/* } */
+}
 
 .home-image {
     width: 100%;
@@ -14,5 +16,9 @@
 
 .home-row {
     display: flex;
-    margin: 0 12.5px 20px 12.5px;
+    margin: 0 12.5px;
+}
+
+.home-row-bottom {
+    height: 12.5px;
 }

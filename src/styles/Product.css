@@ -40,11 +40,15 @@
 }
 
 .product > button {
-    background: #F0C14B;
+    /* background: #f1d58e #F0C14B; */
+    background: linear-gradient(#ffa60052, #ffa600af);
     margin-top: 10px;
+    padding: 7.5px 25px;
 
     color: #111111;
-    border: 1px solid;
+    border: .75px solid;
     border-color: #A88734 #9C7E31 #846A29;
+    border-radius: 2.5px;
 
+    font-size: 12px;
 }

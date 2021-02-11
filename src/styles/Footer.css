@@ -1,0 +1,35 @@
+.footer-link-to-top {
+    background-color: #35455c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+
+    font-size: small;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.footer-link-to-top:hover {
+    cursor: pointer;
+    background-color: #465363;
+}
+
+.footer-1 {
+    background-color: #26313f;
+
+    height: 250px;
+}
+
+.footer-2 {
+    background-color: #26313f;
+    height: 75px;
+    border-top: 2px solid #324258;
+}
+
+.footer-3 {
+    background-color: #131921;
+    height: 250px;
+}

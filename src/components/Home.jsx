@@ -46,6 +46,13 @@ function Home() {
                     <Product />
                 </div>
 
+                <div className="home-row">
+                    <Product />
+                    <Product />
+                </div>
+
+                <div className="home-row-bottom"></div>
+
             </div>
         </div>
 
