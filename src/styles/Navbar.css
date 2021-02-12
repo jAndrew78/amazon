@@ -1,6 +1,7 @@
 .navbar {
     height: 60px;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: #131921;
     position: sticky;
@@ -24,6 +25,7 @@
 .navbar-search-input {
     height: 36px;
     width: 100%;
+    min-width: 500px;
     padding: 10px;
 
     border: none;
@@ -53,6 +55,8 @@
 .navbar-links-line-1 {
     font-size: 12px;
     font-weight: 500;
+    white-space: nowrap;
+
     margin-top: 4px;
     margin-bottom: -4px;
 }
@@ -60,6 +64,7 @@
 .navbar-links-line-2 {
     font-size: 15px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .navbar-cart {
