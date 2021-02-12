@@ -12,7 +12,7 @@ import Audible from './utils/images/hero/audible.jpg';
 import Certified from './utils/images/hero/certified-refurbished.jpg';
 
 
-function Home() {
+function Home() {    
     return (
         <div className="home">
 
@@ -24,7 +24,7 @@ function Home() {
                 /> */}
 
                 {/* HERO CAROUSEL */}
-                <div id="carouselExampleControls" className="carousel slide carousel-fade home-image" data-bs-ride="carousel">
+                <div id="carouselExampleControls" className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         
                         <div className="carousel-item active" data-bs-interval="6000">
