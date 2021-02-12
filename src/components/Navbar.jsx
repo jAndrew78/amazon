@@ -15,7 +15,7 @@ function Navbar() {
 
             <div className="navbar-search">
                 <input className="navbar-search-input" type="text"/>
-                <SearchIcon className="navbar-search-icon" />  
+                <SearchIcon className="navbar-search-icon" style={{ fontSize: 36 }} />  
             </div>
 
             <div className="navbar-links">
