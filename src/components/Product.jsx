@@ -5,38 +5,37 @@ import '../styles/Product.css';
 import AirPods from './utils/images/products/airpods.png';
 
 
-function Product({ title }) {
+function Product({ id, title, price, rating, image }) {
     return (
         <div className='product'>
 
             <div className="product-info">
                 
-                {/* <p>Product Title</p> */}
                 <p className="product-title">{title}</p>
 
                 <div className="product-rating">
+                    {/* <p className="product-rating-stars">⭐</p>
                     <p className="product-rating-stars">⭐</p>
                     <p className="product-rating-stars">⭐</p>
                     <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p>
+                    <p className="product-rating-stars">⭐</p> */}
                     {/* <p className="product-rating-stars">&#9734;</p> */}
                     {/* <p className="product-rating-stars">&#9734;</p> */}
                     
-                    {/* {Array(rating)
+                    {Array(rating)
                     .fill()
                     .map((_, i) => (
-                        <p></p>
-                    ))} */}
+                        <p className="product-rating-stars">⭐</p>
+                    ))}
                 </div>
 
                 <p className="product-price">
                     <small>$</small>
-                    <strong>29.99</strong>
+                    <strong>{price}</strong>
                 </p>
             </div>
 
-            <img src={AirPods} alt="product img" />
+            <img src={image} alt="product img" />
 
             <button>Add to Cart</button>
 
