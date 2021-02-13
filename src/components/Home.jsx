@@ -11,7 +11,7 @@ import Certified from './utils/images/hero/certified-refurbished.jpg';
 // import Alexa from './utils/images/hero/alexa-laptop.jpg';
 
 import AirPods from './utils/images/products/airpods.png';
-import Fitbit from './utils/images/products/fitbit-versa-3.jpg';
+// import Fitbit from './utils/images/products/fitbit-versa-3.jpg';
 
 
 

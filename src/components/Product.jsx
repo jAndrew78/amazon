@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Product.css';
 
 // IMAGES
-import AirPods from './utils/images/products/airpods.png';
+// import AirPods from './utils/images/products/airpods.png';
 
 
 function Product({ id, title, price, rating, image }) {

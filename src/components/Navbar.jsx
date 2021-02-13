@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../styles/Navbar.css';
 
 // IMAGES
@@ -9,9 +11,11 @@ import ShoppingCartIcon from './utils/images/misc/cart.png';
 function Navbar() {
     return (
         <div className='navbar'>
-        
-            <img className="navbar-logo"
-                 src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo" />
+            <Link to="/">
+                <img className="navbar-logo" alt="amazon logo"
+                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+            </Link>
+            
 
             <div className="navbar-search">
                 <input className="navbar-search-input" type="text"/>
@@ -35,11 +39,14 @@ function Navbar() {
                     <span className="navbar-links-line-2">Prime</span>
                 </div>
                 
-                <div className="navbar-cart">
-                    <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
-                    <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
-                    <span className="navbar-cart-count">0</span>
-                </div>
+                <Link to ="checkout">
+                    <div className="navbar-cart">
+                        <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
+                        <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
+                        <span className="navbar-cart-count">0</span>
+                    </div>
+                </Link>
+                
 
             </div>
         </div>
