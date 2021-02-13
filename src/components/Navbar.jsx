@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useStateValue } from './utils/context/StateProvider';
 import '../styles/Navbar.css';
 
 // IMAGES
@@ -9,6 +9,8 @@ import ShoppingCartIcon from './utils/images/misc/cart.png';
 
 
 function Navbar() {
+    const [{ cart, user }, dispatch] = useStateValue();
+
     return (
         <div className='navbar'>
             <Link to="/">
@@ -43,7 +45,9 @@ function Navbar() {
                     <div className="navbar-cart">
                         <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                         <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
-                        <span className="navbar-cart-count">0</span>
+                        <span className="navbar-cart-count">
+                            {cart?.length}
+                        </span>
                     </div>
                 </Link>
                 
