@@ -56,9 +56,9 @@ function Home() {
 
                 {/* PRODUCT ROWS */}
                 <div className="home-row">
-                    <Product />
-                    <Product />
-                    <Product />
+                    <Product title="Apple AirPods" />
+                    <Product title="Apple AirPods" />
+                    <Product title="Apple AirPods" />
                 </div>
 
                 <div className="home-row">

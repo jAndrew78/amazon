@@ -20,8 +20,16 @@
     margin-bottom: 15px;
 }
 
+.product-title {
+    font-size: larger;
+    font-weight: bold;
+
+    margin: 0;
+}
+
 .product-price {
-    margin-top: 5px;
+    margin: 0;
+    /* margin-top: 5px; */
 }
 
 .product-rating {

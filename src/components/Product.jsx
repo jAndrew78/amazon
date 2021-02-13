@@ -5,18 +5,14 @@ import '../styles/Product.css';
 import AirPods from './utils/images/products/airpods.png';
 
 
-function Product() {
+function Product({ title }) {
     return (
         <div className='product'>
 
             <div className="product-info">
                 
-                <p>Product Title</p>
-                
-                <p className="product-price">
-                    <small>$</small>
-                    <strong>29.99</strong>
-                </p>
+                {/* <p>Product Title</p> */}
+                <p className="product-title">{title}</p>
 
                 <div className="product-rating">
                     <p className="product-rating-stars">⭐</p>
@@ -33,6 +29,11 @@ function Product() {
                         <p></p>
                     ))} */}
                 </div>
+
+                <p className="product-price">
+                    <small>$</small>
+                    <strong>29.99</strong>
+                </p>
             </div>
 
             <img src={AirPods} alt="product img" />
