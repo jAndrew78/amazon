@@ -21,7 +21,7 @@ function Login() {
                 <h1>Sign-in</h1>
 
                 <form>
-                    <h5>E-mail</h5>
+                    <h5>Email</h5>
                     <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
                     <h5>Password</h5>
