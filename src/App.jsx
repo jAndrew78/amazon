@@ -7,6 +7,7 @@ import './App.css';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import Login from './components/Login.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
                 <Switch>
 
+                    <Route path="/login" component={ Login } />
                     <Route path="/" component={ Home } />
 
                 </Switch>

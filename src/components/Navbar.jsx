@@ -6,6 +6,7 @@ import '../styles/Navbar.css';
 // IMAGES
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from './utils/images/misc/cart.png';
+import NavbarLogo from './utils/images/logos/navbar-logo.png';
 
 
 function Navbar() {
@@ -15,7 +16,7 @@ function Navbar() {
         <div className='navbar'>
             <Link to="/">
                 <img className="navbar-logo" alt="amazon logo"
-                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+                     src={NavbarLogo} />
             </Link>
             
 
@@ -26,10 +27,13 @@ function Navbar() {
 
             <div className="navbar-links">
 
-                <div className="navbar-links-section">
-                    <span className="navbar-links-line-1">Hello Guest</span>
-                    <span className="navbar-links-line-2">Sign In</span>
-                </div>
+                <Link to='/login'>
+                    <div className="navbar-links-section">
+                        <span className="navbar-links-line-1">Hello Guest</span>
+                        <span className="navbar-links-line-2">Sign In</span>
+                    </div>
+                </Link>
+                
 
                 <div className="navbar-links-section">
                     <span className="navbar-links-line-1">Returns</span>
