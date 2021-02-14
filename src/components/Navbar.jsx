@@ -49,9 +49,12 @@ function Navbar() {
                     <div className="navbar-cart">
                         <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                         <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
-                        <span className="navbar-cart-count">
-                            {cart?.length}
-                        </span>
+                        <div className="cart-count-container">
+                            <span className="navbar-cart-count">
+                                {cart?.length}
+                            </span>
+                        </div>
+                        
                     </div>
                 </Link>
                 

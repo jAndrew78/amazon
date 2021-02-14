@@ -82,6 +82,10 @@
     margin-left: -2px;
 }
 
+.navbar-cart-count-container {
+    width: 25px;
+}
+
 /* off-center when count goes to double digits */
 .navbar-cart-count {
     font-size: 20px;
