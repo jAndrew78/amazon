@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase/firebase';
 import { useStateValue } from './utils/context/StateProvider';
 import '../styles/Navbar.css';
 
@@ -11,6 +12,12 @@ import NavbarLogo from './utils/images/logos/navbar-logo.png';
 
 function Navbar() {
     const [{ cart, user }, dispatch] = useStateValue();
+
+    const handleAuth = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className='navbar'>
@@ -27,10 +34,10 @@ function Navbar() {
 
             <div className="navbar-links">
 
-                <Link to='/login'>
-                    <div className="navbar-links-section">
-                        <span className="navbar-links-line-1">Hello Guest</span>
-                        <span className="navbar-links-line-2">Sign In</span>
+                <Link to={!user && '/login'}>
+                    <div className="navbar-links-section" onClick={handleAuth}>
+                        <span className="navbar-links-line-1">Hello {!user ? "Guest" : user.email}</span>
+                        <span className="navbar-links-line-2">{user ? "Sign OUt" : "Sign In"}</span>
                     </div>
                 </Link>
                 
