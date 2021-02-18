@@ -41,11 +41,12 @@ function Navbar() {
                     </div>
                 </Link>
                 
-
-                <div className="navbar-links-section">
-                    <span className="navbar-links-line-1">Returns</span>
-                    <span className="navbar-links-line-2">& Orders</span>
-                </div>
+                <Link to='/orders'>
+                    <div className="navbar-links-section">
+                        <span className="navbar-links-line-1">Returns</span>
+                        <span className="navbar-links-line-2">& Orders</span>
+                    </div>
+                </Link>
 
                 <div className="navbar-links-section">
                     <span className="navbar-links-line-1">Your</span>
