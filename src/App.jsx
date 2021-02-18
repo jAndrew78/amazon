@@ -1,6 +1,6 @@
 import React, { useEffect }from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { auth } from './firebase/firebase';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -8,7 +8,7 @@ import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Login from './components/Login.jsx';
-import { auth } from './firebase/firebase';
+import Checkout from './components/Checkout.jsx';
 
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
 
                 <Switch>
 
+                    <Route path="/checkout" component={ Checkout } />
                     <Route path="/login" component={ Login } />
                     <Route path="/" component={ Home } />
 
