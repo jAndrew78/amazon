@@ -15,3 +15,7 @@
     padding: 10px;
     border-bottom: 1px solid #D3D3D3;
 }
+
+.checkout-empty {
+    height: 200px;
+}
