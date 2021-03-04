@@ -8,8 +8,9 @@ export const getCartTotal = (cart) =>
     cart?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-    console.log(action);
+    // console.log(state);
     switch (action.type) {
+
         case "ADD_TO_CART":
             return {
                 ...state,
@@ -36,6 +37,13 @@ const reducer = (state, action) => {
                     `Product (id: {action.id}) is not in the cart. Cannot remove.`
                 )
             }
+
+            return {
+                ...state,
+                user: action.user
+            }
+
+        case "SET_USER":
 
             return {
                 ...state,

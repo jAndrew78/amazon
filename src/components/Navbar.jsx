@@ -36,8 +36,8 @@ function Navbar() {
 
                 <Link to={!user && '/login'}>
                     <div className="navbar-links-section" onClick={handleAuth}>
-                        <span className="navbar-links-line-1">Hello {!user ? "Guest" : user.email}</span>
-                        <span className="navbar-links-line-2">{user ? "Sign OUt" : "Sign In"}</span>
+                        <span className="navbar-links-line-1">Hello {user ? user.email : "Guest"}</span>
+                        <span className="navbar-links-line-2">{user ? "Sign Out" : "Sign In"}</span>
                     </div>
                 </Link>
                 

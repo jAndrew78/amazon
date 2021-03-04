@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth } from './firebase/firebase';
+import { useStateValue } from './components/utils/context/StateProvider';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -12,6 +14,8 @@ import Checkout from './components/Checkout.jsx';
 
 
 function App() {
+    const [{}, dispatch] = useStateValue();
+    // const dispatch = useStateValue();
 
     useEffect(() => {
         
@@ -19,18 +23,18 @@ function App() {
             console.log("the user is >>> ", authUser)
 
             if (authUser) {
-                dispatchEvent({
+                dispatch({
                     type: "SET_USER",
-                    user: authUser,
+                    user: authUser
                 })
             } else {
-                dispatchEvent({
+                dispatch({
                     type: "SET_USER",
-                    user: null,
+                    user: null
                 })
             }
         })
-    }, []);
+    }, [dispatch]);
 
     return (
 
