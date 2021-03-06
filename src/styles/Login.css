@@ -20,7 +20,7 @@
     padding: 20px;
 
     background-color: #FFFFFF;
-    border: 1px solid #D3D3D3;
+    border: 2px solid #D3D3D3;
     border-radius: 5px;
 }
 
@@ -45,7 +45,7 @@
     font-size: 12px;
 }
 
-.login-btn, .login-register-btn {
+.login-btn {
     background: linear-gradient(#ffa60052, #ffa600af);
     
     width: 40%;
@@ -55,4 +55,40 @@
     border: 1px solid;
     border-radius: 2.5px;
     border-color: #a88734 #9c7e31 #846a29;
+}
+
+.register {
+    width: 450px;
+}
+
+.register-header {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
+.register-header-hr {
+    flex-grow: 1;
+    position: relative;
+    bottom: 6px;
+}
+
+.register-header-text {
+    color: #808080;
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.login-register-btn {
+    /* background: linear-gradient(#ffa60052, #ffa600af); */
+    background: linear-gradient(#FFFFFF, #DDDDDD);
+
+    font-size: 14px;
+    
+    width: 450px;
+    height: 30px;
+    margin-top: 10px;
+
+    border: 2px solid #BBBBBB;
+    border-radius: 2.5px;
 }

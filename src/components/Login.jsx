@@ -56,12 +56,22 @@ function Login() {
                 </form>
 
                 <p>
-                    By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
-                    see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+                    By signing-in you agree to the AMAZON FAKE CLONE <Link to={'/'}>Conditions of Use</Link> and
+                    <Link to='/'> Privacy Notice.</Link>
                 </p>
 
-                <button className="login-register-btn" onClick={register}>Create Account</button>
+                {/* <button className="login-btn" onClick={register}>Create Account</button> */}
 
+            </div>
+
+            <div className="register">
+                <div className="register-header">
+                    <hr className="register-header-hr" />
+                    <p className="register-header-text">New to Amazon?</p>
+                    <hr className="register-header-hr" />
+                </div>
+
+                <button className="login-register-btn">Create your Amazon account</button>
             </div>
         </div>
     )
