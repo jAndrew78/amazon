@@ -45,21 +45,34 @@
     border-radius: 5px;
 }
 
+.login-container > form > input:focus {
+    outline: none;
+    box-shadow: 0 0 2pt 1pt #FFA500;
+}
+
 .login-container > p {
     margin-top: 15px;
     font-size: 12px;
 }
 
 .login-btn {
-    background: linear-gradient(#ffa60052, #ffa600af);
+    background: linear-gradient(#FFA30050, #FFA300AA);
+    
+    color: #111111;
+    font-size: 12px;
+    font-weight: 600;
     
     width: 40%;
     height: 30px;
     margin-top: 10px;
 
-    border: 1px solid;
+    border: .75px solid;
     border-radius: 2.5px;
     border-color: #a88734 #9c7e31 #846a29;
+}
+
+.login-btn:hover {
+    background: linear-gradient(#FFA60065, #FFA600CC)
 }
 
 .register {
