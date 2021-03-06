@@ -33,6 +33,15 @@
     border-radius: 5px 0 0 5px;
 }
 
+.navbar-search-input:focus {
+    outline: none;
+    box-shadow: 0 0 1pt 1.5pt #FFA500;
+}
+
+.navbar-search-input:focus + .navbar-search-icon {
+    box-shadow: 0 0 1pt 1.5pt #FFA500;
+}
+
 .navbar-search-icon {
     background-color: #FFA500;
     border-radius: 0 5px 5px 0;

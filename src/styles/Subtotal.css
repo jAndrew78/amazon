@@ -40,7 +40,7 @@
 
 .subtotal-button {
     /* background: #f1d58e #F0C14B; */
-    background: linear-gradient(#FFA30050, #FFA300AA);
+    background: linear-gradient(#FFA50050, #FFA500AA);
     margin-top: 10px;
     padding: 7.5px 25px;
 
@@ -54,5 +54,5 @@
 }
 
 .subtotal-button:hover {
-    background: linear-gradient(#FFA60065, #FFA600CC)
+    background: linear-gradient(#FFA50065, #FFA500CC)
 }

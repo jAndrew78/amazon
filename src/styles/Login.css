@@ -47,7 +47,7 @@
 
 .login-container > form > input:focus {
     outline: none;
-    box-shadow: 0 0 2pt 1pt #FFA500;
+    box-shadow: 0 0 1pt 1pt #FFA500;
 }
 
 .login-container > p {
@@ -56,7 +56,7 @@
 }
 
 .login-btn {
-    background: linear-gradient(#FFA30050, #FFA300AA);
+    background: linear-gradient(#FFA50050, #FFA500AA);
     
     color: #111111;
     font-size: 12px;
@@ -72,7 +72,7 @@
 }
 
 .login-btn:hover {
-    background: linear-gradient(#FFA60065, #FFA600CC)
+    background: linear-gradient(#FFA50065, #FFA500CC)
 }
 
 .register {
