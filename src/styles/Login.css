@@ -36,10 +36,12 @@
 }
 
 .login-container > form > input {
-    background-color: rgb(236, 245, 248);
+    background-color: #E8F4F8;
     height: 30px;
     width: 98%;
     margin-bottom: 20px;
+    
+    text-indent: 10px;
 
     border: 1px solid #b8b8b8;
     border-radius: 5px;
