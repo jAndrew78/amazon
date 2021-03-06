@@ -42,17 +42,24 @@ function App() {
 
             <Router>
 
-                <Navbar />
-
                 <Switch>
 
-                    <Route path="/checkout" component={ Checkout } />
                     <Route path="/login" component={ Login } />
-                    <Route path="/" component={ Home } />
+                    
+                    <Route path="/checkout">
+                        <Navbar />
+                        <Checkout />
+                        <Footer />
+                    </Route>
+                    
+                    <Route path="/">
+                        <Navbar />
+                        <Home />
+                        <Footer />
+                    </Route>
+                    
 
                 </Switch>
-
-                <Footer />
 
             </Router>
         </div>
