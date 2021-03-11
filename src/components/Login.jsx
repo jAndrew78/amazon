@@ -57,8 +57,8 @@ function Login() {
 
                 <p>
                     By signing-in you agree to the AMAZON FAKE CLONE 
-                    <Link to={'/'} className="login-container-link">Conditions of Use</Link> and
-                    <Link to='/' className="login-container-link">Privacy Notice.</Link>
+                    <Link to='/' target="_blank" className="login-container-link">Conditions of Use</Link> and
+                    <Link to='/' target="_blank" className="login-container-link">Privacy Notice.</Link>
                 </p>
 
                 {/* <button className="login-btn" onClick={register}>Create Account</button> */}
@@ -73,7 +73,21 @@ function Login() {
                 </div>
 
                 <button className="login-register-btn">Create your Amazon account</button>
+
             </div>
+
+            <div className="sign-in-footer">
+                <hr className="sign-in-footer-hr" />
+                <div className="sign-in-footer-links-div">
+                    <Link to='/' target="_blank" className="sign-in-footer-links">Conditions of Use</Link>
+                    <Link to='/' target="_blank" className="sign-in-footer-links">Privacy Notice</Link>
+                    <Link to='/' target="_blank" className="sign-in-footer-links">Help</Link>
+                </div>
+                <div className="copyright">
+                    &copy; 2077-2077, nozamA, Inc. or it's affiliates
+                </div>
+            </div>
+
         </div>
     )
 }
