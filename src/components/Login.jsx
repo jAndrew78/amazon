@@ -56,7 +56,7 @@ function Login() {
                 </form>
 
                 <p>
-                    By signing-in you agree to the AMAZON FAKE CLONE 
+                    By signing-in you agree to s'nozamA 
                     <Link to='/' target="_blank" className="login-container-link">Conditions of Use</Link> and
                     <Link to='/' target="_blank" className="login-container-link">Privacy Notice.</Link>
                 </p>
@@ -68,11 +68,11 @@ function Login() {
             <div className="register">
                 <div className="register-header">
                     <hr className="register-header-hr" />
-                    <p className="register-header-text">New to Amazon?</p>
+                    <p className="register-header-text">New to nozamA?</p>
                     <hr className="register-header-hr" />
                 </div>
 
-                <button className="login-register-btn">Create your Amazon account</button>
+                <button className="login-register-btn">Create your nozamA account</button>
 
             </div>
 
