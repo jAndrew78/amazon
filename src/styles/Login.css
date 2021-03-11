@@ -77,6 +77,18 @@
     background: linear-gradient(#FFA50065, #FFA500CC)
 }
 
+.login-container > p {
+    font-weight: 600;
+}
+
+.login-container-link {
+    padding-left: 4px;
+}
+
+.login-container-link:hover {
+    color: #DD8500;
+}
+
 .register {
     width: 450px;
 }
@@ -97,6 +109,7 @@
     color: #808080;
     margin: 0 10px;
     font-size: 12px;
+    font-weight: 600;
 }
 
 .login-register-btn {

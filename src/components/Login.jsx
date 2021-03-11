@@ -56,8 +56,9 @@ function Login() {
                 </form>
 
                 <p>
-                    By signing-in you agree to the AMAZON FAKE CLONE <Link to={'/'}>Conditions of Use</Link> and
-                    <Link to='/'> Privacy Notice.</Link>
+                    By signing-in you agree to the AMAZON FAKE CLONE 
+                    <Link to={'/'} className="login-container-link">Conditions of Use</Link> and
+                    <Link to='/' className="login-container-link">Privacy Notice.</Link>
                 </p>
 
                 {/* <button className="login-btn" onClick={register}>Create Account</button> */}
