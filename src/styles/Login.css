@@ -52,14 +52,14 @@
     box-shadow: 0 0 1pt 1pt #FFA500;
 }
 
-.login-btn {
+.login-button {
     background: linear-gradient(#FFA50050, #FFA500AA);
     
     color: #111111;
     font-size: 12px;
     font-weight: 600;
     
-    width: 40%;
+    width: 98%;
     height: 30px;
     margin-top: 10px;
     
@@ -68,7 +68,7 @@
     border-color: #a88734 #9c7e31 #846a29;
 }
 
-.login-btn:hover {
+.login-button:hover {
     background: linear-gradient(#FFA50065, #FFA500CC)
 }
 
@@ -85,6 +85,8 @@
 
 .login-container-link:hover {
     color: #DD8500;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .register {
@@ -110,7 +112,7 @@
     font-weight: 600;
 }
 
-.login-register-btn {
+.login-register-button {
     /* background: linear-gradient(#ffa60052, #ffa600af); */
     background: linear-gradient(#FFFFFF, #DDDDDD);
 
@@ -124,12 +126,16 @@
     border-radius: 2.5px;
 }
 
-.sign-in-footer {
+.login-register-button:hover {
+    background: linear-gradient(#FAFAFA, #CCCCCC);
+}
+
+.login-footer {
     font-size: 12px;
     font-weight: 600;
 }
 
-.sign-in-footer-hr {
+.login-footer-hr {
     flex-grow: 0;
     margin: 25px 0;
     height: 2px;
@@ -139,18 +145,20 @@
     filter: drop-shadow(0 10px 12px #000000);
 }
 
-.sign-in-footer-links-div {
+.login-footer-links-div {
     display: flex;
     justify-content: center;
 }
 
-.sign-in-footer-links {
+.login-footer-links {
     margin: 0 15px;
     color: #0066C0;
 }
 
-.sign-in-footer-links:hover {
+.login-footer-links:hover {
     color: #DD8500;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .copyright {
@@ -159,4 +167,24 @@
 
     margin: 10px 0;
     color: #808080;
+}
+
+.conditions-modal-button {
+    background: linear-gradient(#FFA50050, #FFA500AA);
+    
+    color: #111111;
+    font-size: 12px;
+    font-weight: 600;
+    
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    
+    border: .75px solid;
+    border-radius: 2.5px;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
+.conditions-modal-button:hover {
+    background: linear-gradient(#FFA50065, #FFA500CC)
 }

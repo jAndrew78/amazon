@@ -52,13 +52,17 @@ function Login() {
                     <h5>Password</h5>
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
 
-                    <button className="login-btn" onClick={signIn}>Sign In</button>
+                    <button className="login-button" onClick={signIn}>Sign In</button>
                 </form>
 
                 <p>
                     By signing-in you agree to s'nozamA 
-                    <Link to='/' target="_blank" className="login-container-link">Conditions of Use</Link> and
-                    <Link to='/' target="_blank" className="login-container-link">Privacy Notice.</Link>
+                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-container-link">
+                        Conditions of Use
+                    </span> and
+                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-container-link">
+                        Privacy Notice
+                    </span>.
                 </p>
 
                 {/* <button className="login-btn" onClick={register}>Create Account</button> */}
@@ -72,19 +76,43 @@ function Login() {
                     <hr className="register-header-hr" />
                 </div>
 
-                <button className="login-register-btn">Create your nozamA account</button>
+                <button className="login-register-button">Create your nozamA account</button>
 
             </div>
 
-            <div className="sign-in-footer">
-                <hr className="sign-in-footer-hr" />
-                <div className="sign-in-footer-links-div">
-                    <Link to='/' target="_blank" className="sign-in-footer-links">Conditions of Use</Link>
-                    <Link to='/' target="_blank" className="sign-in-footer-links">Privacy Notice</Link>
-                    <Link to='/' target="_blank" className="sign-in-footer-links">Help</Link>
+            <div className="login-footer">
+                <hr className="login-footer-hr" />
+                <div className="login-footer-links-div">
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+                        Conditions of Use
+                    </div>
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+                        Privacy Notice
+                    </div>
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+                        Help
+                    </div>
                 </div>
                 <div className="copyright">
                     &copy; 2077-2077, nozamA, Inc. or it's affiliates
+                </div>
+            </div>
+
+            <div className="modal fade" id="conditionsModal" tabindex="-1" aria-labelledby="conditionsModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="conditionsModalLabel">This isn't a real website</h5>
+                        </div>
+                        <div className="modal-body text-center mt-3">
+                            It's just a demo site I made for fun
+                            <p>Not affiliated with Amazon in any way</p>
+                            <p>Enjoy!</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn conditions-modal-button" data-bs-dismiss="modal">Got It</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
