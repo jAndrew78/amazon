@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 import FooterLogo from './utils/images/logos/navbar-logo.png';
+import FlagUSA from './utils/images/misc/flag-usa.png';
 
 
 const scrollToTop = () => {
@@ -70,16 +71,18 @@ function Footer() {
 
             <div className='footer-2'>
                 <Link to="/">
-                    <img className="footer-logo" alt="amazon logo"
+                    <img className="footer-2-logo" alt="amazon logo"
                         src={FooterLogo} />
                 </Link>
 
                 <div className="footer-2-language-selection">
-                    &#127760; English
+                    <span className="footer-2-globe">&#127760;</span>
+                    English
                 </div>
 
                 <div className="footer-2-country-selection">
-                    &#127480; United States
+                    <img src={FlagUSA} className="footer-2-flag" alt="Flag USA" />
+                    United States
                 </div>
             </div>
 
