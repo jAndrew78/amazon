@@ -20,7 +20,7 @@ function Navbar() {
     }
 
     return (
-        <div className='navbar'>
+        <div className='navbar no-gutters'>
             <Link to="/">
                 <img className="navbar-logo" alt="amazon logo"
                      src={NavbarLogo} />
