@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
+
+import FooterLogo from './utils/images/logos/navbar-logo.png';
 
 
 const scrollToTop = () => {
@@ -65,7 +68,12 @@ function Footer() {
                 </div>
             </div>
 
-            <div className='footer-2'></div>
+            <div className='footer-2'>
+                <Link to="/">
+                    <img className="footer-logo" alt="amazon logo"
+                        src={FooterLogo} />
+                </Link>
+            </div>
 
             <div className='footer-3'></div>
 

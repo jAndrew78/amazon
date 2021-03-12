@@ -44,8 +44,13 @@
 
 .footer-2 {
     background-color: #26313f;
-    height: 75px;
     border-top: 2px solid #324258;
+}
+
+.footer-logo {
+    width: 90px;
+    object-fit: contain;
+    margin: 40px;               /* DELETE THIS LATER */
 }
 
 .footer-3 {
