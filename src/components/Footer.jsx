@@ -75,13 +75,13 @@ function Footer() {
                         src={FooterLogo} />
                 </Link>
 
-                <div className="footer-2-language-selection">
+                <div className="footer-2-language-selection" data-bs-toggle="modal" data-bs-target="#conditionsModal">
                     <span className="footer-2-globe">&#127760;</span>
                     English
                     <span className="footer-2-arrow">&#9660;</span>
                 </div>
 
-                <div className="footer-2-country-selection">
+                <div className="footer-2-country-selection" data-bs-toggle="modal" data-bs-target="#conditionsModal">
                     <img src={FlagUSA} className="footer-2-flag" alt="Flag USA" />
                     United States
                 </div>
@@ -395,11 +395,22 @@ function Footer() {
                     </div>
                 </div>
  	
+            <div className="row flex justify-content-center small font-weight-bold no-gutters mt-4">
+                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                    Conditions of Use
+                </div>
+                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                    Privacy Notice
+                </div>
+                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                    Interest-Based Ads
+                </div>
+                <div className="footer-copyright">
+                    &copy; 2077-2077, nozamA, Inc. or it's affiliates
+                </div>
+            </div>
             </div>
 
-            <div className="row flex">
-                div.
-            </div>
 
             <div className="modal fade" id="conditionsModal" tabindex="-1" aria-labelledby="conditionsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
@@ -408,8 +419,9 @@ function Footer() {
                             <h5 className="modal-title" id="conditionsModalLabel">This isn't a real website</h5>
                         </div>
                         <div className="modal-body text-center mt-3">
-                            It's just a demo site I made for fun
-                            <p>Not affiliated with Amazon in any way</p>
+                            It's just a demo site I made for fun<br />
+                            Not affiliated with Amazon in any way
+                            <p>Also not affiliated with nozamA... whoever they are</p>
                             <p>Enjoy!</p>
                         </div>
                         <div className="modal-footer">
