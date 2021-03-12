@@ -73,6 +73,14 @@ function Footer() {
                     <img className="footer-logo" alt="amazon logo"
                         src={FooterLogo} />
                 </Link>
+
+                <div className="footer-2-language-selection">
+                    &#127760; English
+                </div>
+
+                <div className="footer-2-country-selection">
+                    &#127480; United States
+                </div>
             </div>
 
             <div className='footer-3'></div>

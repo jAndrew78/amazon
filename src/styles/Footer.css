@@ -47,14 +47,34 @@
 }
 
 .footer-2 {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+
+    color: #DDDDDD;
     background-color: #26313f;
     border-top: 2px solid #324258;
+}
+
+.footer-2-language-selection {
+    position: relative;
+    bottom: 8px;
+    margin-right: 7px;
+    border: 1px solid #DDDDDD;
+    padding: 5px 5px 5px 5px;
+}
+
+.footer-2-country-selection {
+    position: relative;
+    bottom: 8px;
+    border: 1px solid #DDDDDD;
+    padding: 5px 5px 5px 5px;
 }
 
 .footer-logo {
     width: 90px;
     object-fit: contain;
-    margin: 40px;               /* DELETE THIS LATER */
+    margin-right: 75px;
 }
 
 .footer-3 {
