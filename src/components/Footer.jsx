@@ -78,6 +78,7 @@ function Footer() {
                 <div className="footer-2-language-selection">
                     <span className="footer-2-globe">&#127760;</span>
                     English
+                    <span className="footer-2-arrow">&#9660;</span>
                 </div>
 
                 <div className="footer-2-country-selection">
