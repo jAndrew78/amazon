@@ -395,20 +395,21 @@ function Footer() {
                     </div>
                 </div>
  	
-            <div className="row flex justify-content-center small font-weight-bold no-gutters mt-4">
-                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
-                    Conditions of Use
+                <div className="row flex justify-content-center small font-weight-bold no-gutters mt-4">
+                    <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                        Conditions of Use
+                    </div>
+                    <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                        Privacy Notice
+                    </div>
+                    <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
+                        Interest-Based Ads
+                    </div>
                 </div>
-                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
-                    Privacy Notice
-                </div>
-                <div className="footer-3-conditions ml-3 mr-3" data-bs-toggle="modal" data-bs-target="#conditionsModal">
-                    Interest-Based Ads
-                </div>
-                <div className="footer-copyright">
+
+                <div className="footer-copyright row flex justify-content-center small font-weight-bold mt-1">
                     &copy; 2077-2077, nozamA, Inc. or it's affiliates
                 </div>
-            </div>
             </div>
 
 
