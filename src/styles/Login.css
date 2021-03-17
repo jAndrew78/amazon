@@ -1,6 +1,10 @@
-.login {
+body {
     background-color: #FFFFFF;
-    height: 100vh;
+}
+
+.login {
+    /* background-color: #FFFFFF;
+    height: 120vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
