@@ -2,7 +2,7 @@ body {
     background-color: #FFFFFF;
 }
 
-.login {
+.register {
     background-color: #FFFFFF;
     height: 120vh;
     display: flex;
@@ -16,7 +16,7 @@ body {
     width: 100px;
 }
 
-.login-container {
+.register-container {
     /* display: flex;
     flex-direction: column; */
     
@@ -29,20 +29,20 @@ body {
     border-radius: 5px;
 }
 
-.login-container > h2 {
+.register-container > h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.login-container > form > h6 {
+.register-container > form > h6 {
     margin-bottom: 3px;
 }
 
-.login-container > form > input {
+.register-container > form > input {
     background-color: #E8F4F8;
     height: 30px;
     width: 98%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     
     text-indent: 10px;
 
@@ -50,12 +50,12 @@ body {
     border-radius: 5px;
 }
 
-.login-container > form > input:focus {
+.register-container > form > input:focus {
     outline: none;
     box-shadow: 0 0 1pt 1pt #FFA500;
 }
 
-.login-button {
+.register-button {
     background: linear-gradient(#FFA50050, #FFA500AA);
     
     color: #111111;
@@ -71,52 +71,61 @@ body {
     border-color: #a88734 #9c7e31 #846a29;
 }
 
-.login-button:hover {
+.register-button:hover {
     background: linear-gradient(#FFA50065, #FFA500CC)
 }
 
-.login-container > p {
-    margin-top: 15px;
+.register-container > p {
+    margin-top: 10px;
     font-size: 12px;
     font-weight: 600;
 }
 
-.login-container-link {
+.register-container-link {
     padding-left: 4px;
     color: #0066C0;
 }
 
-.login-container-link:hover {
+.register-container-link:hover {
     color: #DD8500;
     cursor: pointer;
     text-decoration: underline;
 }
 
-.new-user {
+.register-container-hr {
+    flex-grow: 0;
+    /* margin: 25px 0; */
+    height: 2px;
+    /* width: 100vw; */
+    border: none;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #E0E0E0));
+    /* filter: drop-shadow(0 10px 12px #000000); */
+}
+
+/* .register {
     width: 450px;
 }
 
-.new-user-header {
+.register-header {
     display: flex;
     margin-top: 25px;
     margin-bottom: -15px;
 }
 
-.new-user-header-hr {
+.register-header-hr {
     flex-grow: 1;
     position: relative;
     bottom: 6px;
 }
 
-.new-user-header-text {
+.register-header-text {
     color: #808080;
     margin: 0 10px;
     font-size: 12px;
     font-weight: 600;
 }
 
-.new-user-button {
-    /* background: linear-gradient(#ffa60052, #ffa600af); */
+.register-register-button {
     background: linear-gradient(#FFFFFF, #DDDDDD);
 
     font-size: 14px;
@@ -129,16 +138,16 @@ body {
     border-radius: 2.5px;
 }
 
-.login-new-user-button:hover {
+.register-register-button:hover {
     background: linear-gradient(#FAFAFA, #CCCCCC);
-}
+} */
 
-.login-footer {
+.register-footer {
     font-size: 12px;
     font-weight: 600;
 }
 
-.login-footer-hr {
+.register-footer-hr {
     flex-grow: 0;
     margin: 25px 0;
     height: 2px;
@@ -148,17 +157,17 @@ body {
     filter: drop-shadow(0 10px 12px #000000);
 }
 
-.login-footer-links-div {
+.register-footer-links-div {
     display: flex;
     justify-content: center;
 }
 
-.login-footer-links {
+.register-footer-links {
     margin: 0 15px;
     color: #0066C0;
 }
 
-.login-footer-links:hover {
+.register-footer-links:hover {
     color: #DD8500;
     cursor: pointer;
     text-decoration: underline;

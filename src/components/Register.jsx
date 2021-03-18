@@ -1,84 +1,98 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase/firebase'
-import '../styles/Login.css';
+import '../styles/Register.css';
 
 import LoginLogo from './utils/images/logos/login-logo.png'
 
 
-function Login() {
+function Register() {
 
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [displayName, setDisplayName] = useState('');
 
-    const signIn = e => {
+    const register = e => {
         e.preventDefault();
 
         auth
-            .signInWithEmailAndPassword(email, password)
+            .createUserWithEmailAndPassword(email, password)
+            .then(function(result) {
+                return result.user.updateProfile({
+                    displayName: displayName
+                })
+            })
             .then(auth => {
                 history.push('/')
             })
-            .catch(error => alert(error.message))
+            .catch(error => alert(error.message)) 
     }
 
     return (
-        <div className='login'>
+        <div className='register'>
             <Link to='/'>
                 <img src={LoginLogo} alt="amazon logo" className="login-logo"/>
             </Link>
 
-            <div className="login-container">
-                <h2>Sign-in</h2>
+            <div className="register-container">
+                <h2>Create Account</h2>
 
                 <form>
+                    <h6>Your Name</h6>
+                    <input type="text" value={displayName} onChange={e => setDisplayName(e.target.value)} />
+                    
                     <h6>Email</h6>
                     <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
                     <h6>Password</h6>
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
 
-                    <button className="login-button" onClick={signIn}>Sign In</button>
+                    <button className="register-button" onClick={register}>Create Your nozamA Account</button>
                 </form>
 
                 <p>
-                    By signing-in you agree to s'nozamA 
-                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-container-link">
+                    By creating an account you agree to s'nozamA 
+                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-container-link">
                         Conditions of Use
                     </span> and
-                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-container-link">
+                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-container-link">
                         Privacy Notice
                     </span>.
                 </p>
 
-                {/* <button className="login-btn" onClick={register}>Create Account</button> */}
+                <hr className="register-container-hr" />
+
+                <p>
+                    Already have an account?
+                    <Link to='/login'>
+                        <span className="register-container-link">Sign-in &#9656;</span>
+                    </Link>
+                    <br/>
+                    Purchasing for work? 
+                    <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-container-link">
+                        Create a business account &#9656;
+                    </span>
+                </p>
+
+                <p>
+                </p>
+
+
+                {/* <button className="register-btn" onClick={register}>Create Account</button> */}
 
             </div>
 
-            <div className="new-user">
-                <div className="new-user-header">
-                    <hr className="new-user-header-hr" />
-                    <p className="new-user-header-text">New to nozamA?</p>
-                    <hr className="new-user-header-hr" />
-                </div>
-
-                <Link to='/register'>
-                    <button className="new-user-button">Create your nozamA account</button>
-                </Link>
-
-            </div>
-
-            <div className="login-footer">
-                <hr className="login-footer-hr" />
-                <div className="login-footer-links-div">
-                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+            <div className="register-footer">
+                <hr className="register-footer-hr" />
+                <div className="register-footer-links-div">
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-footer-links">
                         Conditions of Use
                     </div>
-                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-footer-links">
                         Privacy Notice
                     </div>
-                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-footer-links">
+                    <div data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-footer-links">
                         Help
                     </div>
                 </div>
@@ -110,4 +124,4 @@ function Login() {
 }
 
 
-export default Login;
+export default Register;

@@ -10,6 +10,7 @@ import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Login from './components/Login.jsx';
+import Register from './components/Register.jsx';
 import Checkout from './components/Checkout.jsx';
 
 
@@ -45,6 +46,8 @@ function App() {
                 <Switch>
 
                     <Route path="/login" component={ Login } />
+
+                    <Route path="/register" component={ Register } />
                     
                     <Route path="/checkout">
                         <Navbar />
