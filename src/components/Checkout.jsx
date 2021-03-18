@@ -50,8 +50,9 @@ function Checkout() {
                         </h3>
                         <h2 className="checkout-title">Your Shopping Cart</h2>
 
-                        {cart.map(item => (
-                            <CheckoutProduct 
+                        {cart.map((item, i) => (
+                            <CheckoutProduct
+                            key={i} 
                             id={item.id}
                             title={item.title}
                             image={item.image}
