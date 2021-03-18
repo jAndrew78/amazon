@@ -28,15 +28,16 @@ const reducer = (state, action) => {
         // REMOVE A SINGLE ITEM FROM THE CART ARRAY
         case "REMOVE_FROM_CART":
             
-            // index = array position of item to be removed
+            // SET INDEX = ARRAY POSITION OF ITEM TO BE REMOVED
             const index = state.cart.findIndex(
-                cartItem => cartItem.id === action.id
+                // cartItem => cartItem.id === action.id  // if remove by id, only removes first one it finds with that id
+                cartItem => cartItem.key === action.key     // does it work better if we remove by key
             )
 
-            // make a copy of current cart
+            // MAKE A COPY OF CURRENT CART
             let newCart = [...state.cart]
 
-            // if the index appears in the array, splice it out of the array
+            // IF THE INDEX APPEARS IN THE ARRAY, SPLICE IT OUT
             if (index >= 0) {
                 newCart.splice(index, 1)
             } else {
@@ -45,14 +46,14 @@ const reducer = (state, action) => {
                 )
             }
 
-            // return current state with cart updated to newCart (without the item we removed)
+            // RETURN CURRENT STATE WITH CART UPDATED TO newCart (WITH ITEM REMOVED)
             return {
                 ...state,
                 cart: newCart,
             }
 
+        // RETURNS THE CURRENT STATE WITH USER UPDATED
         case "SET_USER":
-
             return {
                 ...state,
                 user: action.user
