@@ -16,7 +16,13 @@ function Checkout() {
                 <div className="checkout-left">
                     <img className="checkout-ad" src={OceanCard} alt="banner ad" />
                     <div>
-                        <h3>Hello, {user ? user?.email : "Guest"}</h3>
+                        <h3>
+                            Hello {
+                                user?.displayName ? user.displayName.charAt(0).toUpperCase() +user.displayName.slice(1).toLowerCase() 
+                                : user ? user?.email 
+                                : "Guest"
+                            }
+                        </h3>
                         <h2 className="checkout-title">Your Shopping Cart is Empty</h2>
                         <div className="checkout-empty"></div>
                     </div>
@@ -35,7 +41,13 @@ function Checkout() {
                     <img className="checkout-ad" src={OceanCard} alt="banner ad"/>
                     
                     <div>
-                        <h3>Hello, {user?.email}</h3>
+                        <h3>
+                            Hello {
+                                user?.displayName ? user.displayName.charAt(0).toUpperCase() +user.displayName.slice(1).toLowerCase() 
+                                : user ? user?.email 
+                                : "Guest"
+                            }
+                        </h3>
                         <h2 className="checkout-title">Your Shopping Cart</h2>
 
                         {cart.map(item => (

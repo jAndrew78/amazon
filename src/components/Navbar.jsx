@@ -36,7 +36,13 @@ function Navbar() {
 
                 <Link to={!user && '/login'}>
                     <div className="navbar-links-section" onClick={handleAuth}>
-                        <span className="navbar-links-line-1">Hello {user ? user.displayName?.charAt(0).toUpperCase() + user.displayName?.slice(1).toLowerCase() : "Guest"}</span>
+                        <span className="navbar-links-line-1">
+                            Hello {
+                                user?.displayName ? user.displayName.charAt(0).toUpperCase() + user.displayName.slice(1).toLowerCase() 
+                                : user ? user.email 
+                                : "Guest"
+                            }
+                        </span>
                         <span className="navbar-links-line-2">{user ? "Sign Out" : "Sign In"}</span>
                     </div>
                 </Link>
