@@ -8,7 +8,7 @@ export const getCartTotal = (cart) =>
     cart?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-    console.log(state);
+    // console.log(state);
     switch (action.type) {
 
         // ADD THE ITEM WE PREFORMED AN ACTION ON TO THE END OF THE CART ARRAY
