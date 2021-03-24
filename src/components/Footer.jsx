@@ -6,10 +6,16 @@ import FooterLogo from './utils/images/logos/navbar-logo.png';
 import FlagUSA from './utils/images/misc/flag-usa.png';
 
 
-const scrollToTop = () => {
+const scrollToTopSmooth = () => {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
+    })
+}
+
+const scrollToTopInstant = () => {
+    window.scrollTo({
+        top: 0
     })
 }
 
@@ -17,7 +23,7 @@ function Footer() {
     return (
         <div className="footer">
 
-            <div className='footer-link-to-top' onClick={scrollToTop}>Back to top</div>
+            <div className='footer-link-to-top' onClick={scrollToTopSmooth}>Back to top</div>
 
             <div className='footer-1'>
                 <div className="footer-1-row">
@@ -70,7 +76,7 @@ function Footer() {
             </div>
 
             <div className='footer-2'>
-                <Link to="/">
+                <Link to="/" onClick={scrollToTopInstant}>
                     <img className="footer-2-logo" alt="amazon logo"
                         src={FooterLogo} />
                 </Link>

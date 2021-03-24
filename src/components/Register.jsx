@@ -6,6 +6,13 @@ import '../styles/Register.css';
 import LoginLogo from './utils/images/logos/login-logo.png'
 
 
+const scrollToTopInstant = () => {
+    window.scrollTo({
+        top: 0
+    })
+}
+
+
 function Register() {
 
     const history = useHistory();
@@ -31,7 +38,7 @@ function Register() {
 
     return (
         <div className='register'>
-            <Link to='/'>
+            <Link to='/' onClick={scrollToTopInstant}>
                 <img src={LoginLogo} alt="amazon logo" className="login-logo"/>
             </Link>
 
@@ -65,7 +72,7 @@ function Register() {
 
                 <p>
                     Already have an account?
-                    <Link to='/login'>
+                    <Link to='/login' onClick={scrollToTopInstant}>
                         <span className="register-container-link">Sign-in &#9656;</span>
                     </Link>
                     <br/>

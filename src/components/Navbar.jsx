@@ -10,6 +10,13 @@ import ShoppingCartIcon from './utils/images/misc/cart.png';
 import NavbarLogo from './utils/images/logos/navbar-logo.png';
 
 
+const scrollToTopInstant = () => {
+    window.scrollTo({
+        top: 0
+    })
+}
+
+
 function Navbar() {
     const [{ cart, user }, dispatch] = useStateValue();
 
@@ -21,7 +28,7 @@ function Navbar() {
 
     return (
         <div className='navbar no-gutters'>
-            <Link to="/">
+            <Link to="/" onClick={scrollToTopInstant}>
                 <img className="navbar-logo" alt="amazon logo"
                      src={NavbarLogo} />
             </Link>
@@ -34,7 +41,7 @@ function Navbar() {
 
             <div className="navbar-links">
 
-                <Link to={!user && '/login'}>
+                <Link to={!user && '/login'} onClick={scrollToTopInstant}>
                     <div className="navbar-links-section" onClick={handleAuth}>
                         <span className="navbar-links-line-1">
                             Hello {
@@ -47,7 +54,7 @@ function Navbar() {
                     </div>
                 </Link>
                 
-                <Link to='/orders'>
+                <Link to='/orders' onClick={scrollToTopInstant}>
                     <div className="navbar-links-section">
                         <span className="navbar-links-line-1">Returns</span>
                         <span className="navbar-links-line-2">& Orders</span>
@@ -59,7 +66,7 @@ function Navbar() {
                     <span className="navbar-links-line-2">Prime</span>
                 </div>
                 
-                <Link to ="checkout">
+                <Link to ="checkout" onClick={scrollToTopInstant}>
                     <div className="navbar-cart">
                         <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                         <span className="navbar-links-line-2 navbar-cart-text">Cart</span>

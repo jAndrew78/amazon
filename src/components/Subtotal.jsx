@@ -7,6 +7,13 @@ import { getCartTotal } from './utils/context/reducer';
 import '../styles/Subtotal.css';
 
 
+const scrollToTopInstant = () => {
+    window.scrollTo({
+        top: 0
+    })
+}
+
+
 function Subtotal() {
     const history = useHistory();
     const [{ cart }, dispatch] = useStateValue();
@@ -16,7 +23,7 @@ function Subtotal() {
         return (
             <div className="subtotal-empty">
                 <p>Your Cart is Empty...</p>
-                <Link to='/'>
+                <Link to='/' onClick={scrollToTopInstant}>
                     <button className="subtotal-button">Go Buy Things!!!</button>
                 </Link> 
             </div>

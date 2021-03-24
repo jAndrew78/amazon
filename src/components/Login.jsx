@@ -6,6 +6,13 @@ import '../styles/Login.css';
 import LoginLogo from './utils/images/logos/login-logo.png'
 
 
+const scrollToTopInstant = () => {
+    window.scrollTo({
+        top: 0
+    })
+}
+
+
 function Login() {
 
     const history = useHistory();
@@ -25,7 +32,7 @@ function Login() {
 
     return (
         <div className='login'>
-            <Link to='/'>
+            <Link to='/' onClick={scrollToTopInstant}>
                 <img src={LoginLogo} alt="amazon logo" className="login-logo"/>
             </Link>
 
@@ -63,7 +70,7 @@ function Login() {
                     <hr className="new-user-header-hr" />
                 </div>
 
-                <Link to='/register'>
+                <Link to='/register' onClick={scrollToTopInstant}>
                     <button className="new-user-button">Create your nozamA account</button>
                 </Link>
 
