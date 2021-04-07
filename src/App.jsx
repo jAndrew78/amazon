@@ -59,7 +59,6 @@ function App() {
                     <Route path="/checkout">
                         <Navbar />
                         <Checkout />
-                        <Footer />
                     </Route>
                     
                     <Route path="/">

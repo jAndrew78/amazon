@@ -1,0 +1,36 @@
+.checkout {
+    background-color: #FFFFFF;
+}
+
+.checkout-container > h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: #EAEDED;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.checkout-container > h1 a {
+    text-decoration: none;
+}
+
+.checkout-section {
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.checkout-title {
+    flex: 0.2;  /* take up 20% of the screen - width wise in this case */
+}
+
+.checkout-address, .checkout-items {
+    flex: 0.8;  /* take up 80% of the screen - width wise in this case */
+}
+
+.checkout-address > p {
+    margin-bottom: -5px;
+}
+
+

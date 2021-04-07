@@ -51,9 +51,12 @@ function Subtotal() {
                     prefix={"$"}
                 />
 
-                <Link to="/checkout" onClick={scrollToTopInstant}>
-                    <button className="subtotal-button">Proceed to Checkout</button>
-                </Link>
+                <button className="subtotal-button" 
+                        onClick={e => history.push('/checkout') && scrollToTopInstant}
+                >
+                    Proceed to Checkout
+                </button>
+                
             </div>
         )
     }

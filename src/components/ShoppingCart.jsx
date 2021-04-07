@@ -1,4 +1,4 @@
-// OUTSIDE IMPORTS
+// NODE PACKAGE IMPORTS
 import React from 'react';
 import FlipMove from 'react-flip-move';
 
