@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import CurrencyFormat from 'react-currency-format';
-import { useHistory } from 'react-router-dom';
+
 import { useStateValue } from './utils/context/StateProvider';
 import { getCartTotal } from './utils/context/reducer';
+
 import '../styles/Subtotal.css';
 
 
@@ -50,7 +51,9 @@ function Subtotal() {
                     prefix={"$"}
                 />
 
-                <button className="subtotal-button">Proceed to Checkout</button>
+                <Link to="/checkout">
+                    <button className="subtotal-button">Proceed to Checkout</button>
+                </Link>
             </div>
         )
     }

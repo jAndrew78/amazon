@@ -1,21 +1,21 @@
-.checkout {
+.shopping-cart {
     background-color: #FFFFFF;
     display: flex;
     height: max-content;
     padding: 20px;
 }
 
-.checkout-ad {
+.shopping-cart-ad {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.checkout-title {
+.shopping-cart-title {
     margin-right: 10px;
     padding: 10px 0;
     border-bottom: 1px solid #D3D3D3;
 }
 
-.checkout-empty {
+.shopping-cart-empty {
     height: 200px;
 }

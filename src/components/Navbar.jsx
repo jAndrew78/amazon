@@ -66,7 +66,7 @@ function Navbar() {
                     <span className="navbar-links-line-2">Prime</span>
                 </div>
                 
-                <Link to ="checkout" onClick={scrollToTopInstant}>
+                <Link to ="shopping-cart" onClick={scrollToTopInstant}>
                     <div className="navbar-cart">
                         <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                         <span className="navbar-links-line-2 navbar-cart-text">Cart</span>

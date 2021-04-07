@@ -11,7 +11,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
-import Checkout from './components/Checkout.jsx';
+import ShoppingCart from './components/ShoppingCart.jsx';
 
 
 function App() {
@@ -49,9 +49,9 @@ function App() {
 
                     <Route path="/register" component={ Register } />
                     
-                    <Route path="/checkout">
+                    <Route path="/shopping-cart">
                         <Navbar />
-                        <Checkout />
+                        <ShoppingCart />
                         <Footer />
                     </Route>
                     
