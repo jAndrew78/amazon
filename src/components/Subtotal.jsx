@@ -51,7 +51,7 @@ function Subtotal() {
                     prefix={"$"}
                 />
 
-                <Link to="/checkout">
+                <Link to="/checkout" onClick={scrollToTopInstant}>
                     <button className="subtotal-button">Proceed to Checkout</button>
                 </Link>
             </div>

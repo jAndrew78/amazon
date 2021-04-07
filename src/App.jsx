@@ -12,6 +12,7 @@ import Footer from './components/Footer.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 import ShoppingCart from './components/ShoppingCart.jsx';
+import Checkout from './components/Checkout.jsx';
 
 
 function App() {
@@ -52,6 +53,12 @@ function App() {
                     <Route path="/shopping-cart">
                         <Navbar />
                         <ShoppingCart />
+                        <Footer />
+                    </Route>
+                    
+                    <Route path="/checkout">
+                        <Navbar />
+                        <Checkout />
                         <Footer />
                     </Route>
                     
