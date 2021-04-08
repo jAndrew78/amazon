@@ -36,8 +36,10 @@ function Checkout() {
                         {/* REPLACE DISPLAYNAME WITH FIRST / LAST OR SHIPPING ADDRESS NAME, ETC*/}
                         <p>
                             {
-                                user?.displayName.charAt(0).toUpperCase() + 
-                                user?.displayName.slice(1).toLowerCase()
+                                user?.displayName ?
+                                    user?.displayName.charAt(0).toUpperCase() + 
+                                    user?.displayName.slice(1).toLowerCase() :
+                                'Guest'
                             } LastName
                         </p>
                         {/* REPLACE WITH SHIPPING ADDRESS OPTIONS */}

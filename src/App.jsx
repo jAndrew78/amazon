@@ -1,11 +1,16 @@
+// 3RD PARTY IMPORTS
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth } from './firebase/firebase';
+
+// LOCAL IMPORTS
 import { useStateValue } from './components/utils/context/StateProvider';
 
+// STYLES
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
+// COMPONENTS
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
