@@ -26,6 +26,9 @@ function Navbar() {
         }
     }
 
+    // OPTIONAL FIX FOR THE LOGIN LINK
+    // const ConditionalLink = !user ? Link : React.DOM.div;
+
     return (
         <div className='navbar no-gutters'>
             <Link to="/" onClick={scrollToTopInstant}>
@@ -41,7 +44,8 @@ function Navbar() {
 
             <div className="navbar-links">
 
-                <Link to={!user && '/login'} onClick={scrollToTopInstant}>
+                {/* IF NO USER, LINK TO LOGIN - ELSE LINK TO HOME */}
+                <Link to={!user ? '/login' : '/'} onClick={scrollToTopInstant}>
                     <div className="navbar-links-section" onClick={handleAuth}>
                         <span className="navbar-links-line-1">
                             Hello {
@@ -66,7 +70,7 @@ function Navbar() {
                     <span className="navbar-links-line-2">Prime</span>
                 </div>
                 
-                <Link to ="shopping-cart" onClick={scrollToTopInstant}>
+                <Link to ="/shopping-cart" onClick={scrollToTopInstant}>
                     <div className="navbar-cart">
                         <img className="navbar-cart-icon" src={ShoppingCartIcon} alt="Shopping Cart" />
                         <span className="navbar-links-line-2 navbar-cart-text">Cart</span>
