@@ -32,12 +32,16 @@ function Checkout() {
         
         // GENERATE STRIPE SECRET BEFORE WE CHARGE THEIR CARD
         const getClientSecret = async () => {
-            const response = await axios({
-                method: 'post',
-                // x100 BELOW - STRIPE EXPECTS PAYMENT TOTAL IN A SUBUNIT OF THE CURRENCY (CENTS IF USING $)
-                url: `/payments/create?total=${getCartTotal(cart) * 100}`
-            })
-            setClientSecret(response.data.clientSecret)
+            try {
+                const response = await axios({
+                    method: 'post',
+                    // x100 BELOW - STRIPE EXPECTS PAYMENT TOTAL IN A SUBUNIT OF THE CURRENCY (CENTS IF USING $)
+                    url: `/payments/create?total=${getCartTotal(cart) * 100}`
+                })
+                setClientSecret(response.data.clientSecret)
+            } catch(err) {
+                console.log(err)
+            } 
         }
 
         getClientSecret();
@@ -47,19 +51,22 @@ function Checkout() {
         e.preventDefault();
         setProcessing(true);
 
-        // try catch ??
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement)
-            }
-        }).then(({ paymentIntent }) => {    // paymentIntent is basically what Stripe calls payment confirmation
-            setSucceeded(true);
-            setError(null);
-            setProcessing(false);
-
-            // REPLACE PAYMENT PAGE WITH ORDERS PAGE IN HISTORY SO THE BACK BUTTON DOESN'T TAKE THEM BACK TO THE PAYMENT PAGE
-            history.replace('/orders')
-        })
+        try {
+            const payload = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: elements.getElement(CardElement)
+                }
+            }).then(({ paymentIntent }) => {    // paymentIntent is basically what Stripe calls payment confirmation
+                setSucceeded(true);
+                setError(null);
+                setProcessing(false);
+                
+                // REPLACE PAYMENT PAGE WITH ORDERS PAGE IN HISTORY SO THE BACK BUTTON DOESN'T TAKE THEM BACK TO THE PAYMENT PAGE
+                history.replace('/orders')
+            })
+        } catch(err) {
+            console.log(err)
+        }
     }
 
     const handleChange = e => {
