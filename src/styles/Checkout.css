@@ -25,7 +25,7 @@
     flex: 0.2;  /* take up 20% of the screen - width wise in this case */
 }
 
-.checkout-address, .checkout-items {
+.checkout-address, .checkout-items, .checkout-payment {
     flex: 0.8;  /* take up 80% of the screen - width wise in this case */
 }
 

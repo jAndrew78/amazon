@@ -1,18 +1,71 @@
-// NODE PACKAGE IMPORTS
-import React from 'react';
-import { Link } from 'react-router-dom';
+// 3RD PARTY IMPORTS
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import CurrencyFormat from 'react-currency-format';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
 // LOCAL IMPORTS
-import { useStateValue } from './utils/context/StateProvider.jsx'
-import CheckoutProduct from './CheckoutProduct.jsx';
+import { useStateValue } from './utils/context/StateProvider'
+import CheckoutProduct from './CheckoutProduct';
+import { getCartTotal } from './utils/context/reducer';
+import axios from './utils/axios/Axios';
 
-// STYLE IMPORTS
+// STYLES
 import '../styles/Checkout.css';
 
 
 function Checkout() {
 
     const [{ cart, user }, dispatch] = useStateValue();
+
+    const stripe = useStripe();
+    const elements = useElements();
+    const history = useHistory();
+
+    const [error, setError] = useState(null);
+    const [disabled, setDisabled] = useState(true);
+    const [processing, setProcessing] = useState('');
+    const [succeeded, setSucceeded] = useState(false);
+    const [clientSecret, setClientSecret] = useState(true);
+
+    useEffect(() => {
+        
+        // GENERATE STRIPE SECRET BEFORE WE CHARGE THEIR CARD
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                // x100 BELOW - STRIPE EXPECTS PAYMENT TOTAL IN A SUBUNIT OF THE CURRENCY (CENTS IF USING $)
+                url: `/payments/create?total=${getCartTotal(cart) * 100}`
+            })
+            setClientSecret(response.data.clientSecret)
+        }
+
+        getClientSecret();
+    }, [cart])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setProcessing(true);
+
+        // try catch ??
+        const payload = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
+            }
+        }).then(({ paymentIntent }) => {    // paymentIntent is basically what Stripe calls payment confirmation
+            setSucceeded(true);
+            setError(null);
+            setProcessing(false);
+
+            // REPLACE PAYMENT PAGE WITH ORDERS PAGE IN HISTORY SO THE BACK BUTTON DOESN'T TAKE THEM BACK TO THE PAYMENT PAGE
+            history.replace('/orders')
+        })
+    }
+
+    const handleChange = e => {
+        setDisabled(e.empty);
+        setError(e.error ? e.error.message : '');
+    }
 
     return (
         <div className='checkout'>
@@ -72,8 +125,37 @@ function Checkout() {
                     <div className="checkout-title">
                         <h3>Payment Method</h3>
                     </div>
-                    <div className="checkout-details">
+                    <div className="checkout-payment">
                         {/* STRIPE MAGIC */}
+
+                        <form onSubmit={handleSubmit}>
+                            <CardElement onChange={handleChange}/>
+
+                            <div className="checkout-price-container">
+                                
+                                <CurrencyFormat 
+                                    renderText={value => (
+                                        <h3>Order Total: {value}</h3>
+                                    )}
+                                    decimalScale={2}
+                                    value={getCartTotal(cart)}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                />
+
+                                <button disabled={processing || disabled || succeeded }>
+                                    <span>
+                                        {processing ? <p>Processing</p> : 'Buy Now'}
+                                    </span>
+                                </button>
+
+                            </div>
+                            
+                            {/* PAYMENT INFO ERROR */}
+                            {error && <div>{error}</div>}
+
+                        </form>
                     </div>
                     
                 </div>
