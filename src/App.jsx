@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth } from './firebase/firebase';
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 
 // LOCAL IMPORTS
 import { useStateValue } from './components/utils/context/StateProvider';
@@ -18,6 +20,11 @@ import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 import ShoppingCart from './components/ShoppingCart.jsx';
 import Checkout from './components/Checkout.jsx';
+
+
+const promise = loadStripe(
+    "pk_test_51Ie323IRh5MugjDmOPqUjKYmBqR9H77d51jLjD8IjYe4GhOe5K1E5Pu4CpNE3MmoD63PL2LEUJteQPjwEWPUKTkF00PviyPzHO"
+)
 
 
 function App() {
@@ -63,7 +70,9 @@ function App() {
                     
                     <Route path="/checkout">
                         <Navbar />
-                        <Checkout />
+                        <Elements stripe={promise}>
+                            <Checkout />
+                        </Elements>
                     </Route>
                     
                     <Route path="/">
