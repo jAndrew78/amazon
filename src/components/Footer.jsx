@@ -1,11 +1,16 @@
+// 3RD PARTY IMPORTS
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Footer.css';
 
+// IMAGES
 import FooterLogo from './utils/images/logos/navbar-logo.png';
 import FlagUSA from './utils/images/misc/flag-usa.png';
 
+// STYLES
+import '../styles/Footer.css';
 
+
+// FUNCTIONS
 const scrollToTopSmooth = () => {
     window.scrollTo({
         top: 0,
@@ -19,12 +24,16 @@ const scrollToTopInstant = () => {
     })
 }
 
+
 function Footer() {
     return (
         <div className="footer">
 
+            {/* BACK TO TOP LINK */}
             <div className='footer-link-to-top' onClick={scrollToTopSmooth}>Back to top</div>
 
+
+            {/* FOOTER 1 - NOZAMA LINKS */}
             <div className='footer-1'>
                 <div className="footer-1-row">
                     <div className="footer-1-header">Get to Know Us</div>
@@ -75,6 +84,8 @@ function Footer() {
                 </div>
             </div>
 
+
+            {/* FOOTER 2 - COUNTRY AND LANGUAGE SETTINGS */}
             <div className='footer-2'>
                 <Link to="/" onClick={scrollToTopInstant}>
                     <img className="footer-2-logo" alt="amazon logo"
@@ -93,6 +104,8 @@ function Footer() {
                 </div>
             </div>
 
+
+            {/* FOOTER 3 - NOZAMA AND PARTNER LINKS */}
             <div className='footer-3'>
 
                 <div className="row">
@@ -419,6 +432,7 @@ function Footer() {
             </div>
 
 
+            {/* MODAL */}
             <div className="modal fade" id="conditionsModal" tabIndex="-1" aria-labelledby="conditionsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">

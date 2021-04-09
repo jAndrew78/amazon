@@ -1,11 +1,16 @@
+// 3RD PARTY IMPORTS
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+
+// LOCAL IMPORTS
 import { auth } from '../firebase/firebase'
+
+// IMAGES & STYLES
+import LoginLogo from './utils/images/logos/login-logo.png'
 import '../styles/Login.css';
 
-import LoginLogo from './utils/images/logos/login-logo.png'
 
-
+// FUNCTIONS
 const scrollToTopInstant = () => {
     window.scrollTo({
         top: 0
@@ -32,6 +37,8 @@ function Login() {
 
     return (
         <div className='login'>
+
+            {/* LOGO LINK */}
             <Link to='/' onClick={scrollToTopInstant}>
                 <img src={LoginLogo} alt="amazon logo" className="login-logo"/>
             </Link>
@@ -39,6 +46,7 @@ function Login() {
             <div className="login-container">
                 <h2>Sign-in</h2>
 
+                {/* LOGIN FORM */}
                 <form>
                     <h6>Email</h6>
                     <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
@@ -49,6 +57,7 @@ function Login() {
                     <button className="login-button" onClick={signIn}>Sign In</button>
                 </form>
 
+                {/* DISCLAIMER */}
                 <p>
                     By signing-in you agree to s'nozamA 
                     <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="login-container-link">
@@ -63,6 +72,7 @@ function Login() {
 
             </div>
 
+            {/* NEW USER OPTION */}
             <div className="new-user">
                 <div className="new-user-header">
                     <hr className="new-user-header-hr" />
@@ -70,12 +80,14 @@ function Login() {
                     <hr className="new-user-header-hr" />
                 </div>
 
+                {/* NEW ACCOUT LINK */}
                 <Link to='/register' onClick={scrollToTopInstant}>
                     <button className="new-user-button">Create your nozamA account</button>
                 </Link>
 
             </div>
 
+            {/* LOGIN FOOTER */}
             <div className="login-footer">
                 <hr className="login-footer-hr" />
                 <div className="login-footer-links-div">
@@ -94,6 +106,7 @@ function Login() {
                 </div>
             </div>
 
+            {/* MODAL */}
             <div className="modal fade" id="conditionsModal" tabIndex="-1" aria-labelledby="conditionsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">

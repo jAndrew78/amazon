@@ -1,18 +1,21 @@
+// 3RD PARTY IMPORTS
 import React from 'react';
-import '../styles/Home.css';
 
-// COMPONENTS
+// LOCAL COMPONENTS
 import Product from './Product';
 
-// IMAGES
+// HERO IMAGES
 import Prime from './utils/images/hero/prime-video.jpg';
 import Audible from './utils/images/hero/audible.jpg';
 import Certified from './utils/images/hero/certified-refurbished.jpg';
 // import Alexa from './utils/images/hero/alexa-laptop.jpg';
 
+// PRODUCT IMAGES
 import AirPods from './utils/images/products/airpods.png';
 // import Fitbit from './utils/images/products/fitbit-versa-3.jpg';
 
+// STYLES
+import '../styles/Home.css';
 
 
 function Home() {

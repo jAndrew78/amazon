@@ -7,12 +7,9 @@ import Subtotal from './Subtotal';
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './utils/context/StateProvider';
 
-// IMAGES
+// IMAGES & STYLES
 import OceanCard from './utils/images/banner-ads/ocean-card.jpg'
-
-// STYLES
 import '../styles/ShoppingCart.css';
-
 
 
 function ShoppingCart() {
@@ -59,6 +56,8 @@ function ShoppingCart() {
             </div>
         )
     } else {
+
+        // NON EMPTY CART DISPLAY
         return (
             <div className='shopping-cart'>
 

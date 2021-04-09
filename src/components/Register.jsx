@@ -1,11 +1,16 @@
+// 3RD PARTY IMPORTS
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+
+// LOCAL IMPORTS
 import { auth } from '../firebase/firebase'
+
+// IMAGES & STYLES
+import LoginLogo from './utils/images/logos/login-logo.png'
 import '../styles/Register.css';
 
-import LoginLogo from './utils/images/logos/login-logo.png'
 
-
+// FUNCTIONS
 const scrollToTopInstant = () => {
     window.scrollTo({
         top: 0
@@ -38,6 +43,8 @@ function Register() {
 
     return (
         <div className='register'>
+
+            {/* LOGO LINK */}
             <Link to='/' onClick={scrollToTopInstant}>
                 <img src={LoginLogo} alt="amazon logo" className="login-logo"/>
             </Link>
@@ -45,6 +52,7 @@ function Register() {
             <div className="register-container">
                 <h2>Create Account</h2>
 
+                {/* REGISTRATION FORM */}
                 <form>
                     <h6>Your Name</h6>
                     <input type="text" value={displayName} onChange={e => setDisplayName(e.target.value)} />
@@ -58,6 +66,7 @@ function Register() {
                     <button className="register-button" onClick={register}>Create Your nozamA Account</button>
                 </form>
 
+                {/* DISCLAIMER */}
                 <p>
                     By creating an account you agree to s'nozamA 
                     <span data-bs-toggle="modal" data-bs-target="#conditionsModal" className="register-container-link">
@@ -70,6 +79,7 @@ function Register() {
 
                 <hr className="register-container-hr" />
 
+                {/* SIGN IN / BUSINESS LINKS */}
                 <p>
                     Already have an account?
                     <Link to='/login' onClick={scrollToTopInstant}>
@@ -82,6 +92,7 @@ function Register() {
                     </span>
                 </p>
 
+                {/* SPACING */}
                 <p>
                 </p>
 
@@ -90,6 +101,7 @@ function Register() {
 
             </div>
 
+            {/* REGISTRATION PAGE FOOTER */}
             <div className="register-footer">
                 <hr className="register-footer-hr" />
                 <div className="register-footer-links-div">
@@ -108,6 +120,7 @@ function Register() {
                 </div>
             </div>
 
+            {/* MODAL */}
             <div className="modal fade" id="conditionsModal" tabIndex="-1" aria-labelledby="conditionsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">

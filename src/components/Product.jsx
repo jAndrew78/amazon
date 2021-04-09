@@ -30,14 +30,8 @@ function Product({ id, title, price, rating, image }) {
                 
                 <p className="product-title">{title}</p>
 
+                {/* STARS MAP */}
                 <div className="product-rating">
-                    {/* <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p>
-                    <p className="product-rating-stars">⭐</p> */}
-                    {/* <p className="product-rating-stars">&#9734;</p> */}
-                    {/* <p className="product-rating-stars">&#9734;</p> */}
                     
                     {Array(rating)
                     .fill()
@@ -46,14 +40,17 @@ function Product({ id, title, price, rating, image }) {
                     ))}
                 </div>
 
+                {/* PRODUCT PRICE */}
                 <p className="product-price">
                     <small>$</small>
                     <strong>{price}</strong>
                 </p>
             </div>
 
+            {/* PRODUCT IMAGE */}
             <img src={image} alt="product img" />
 
+            {/* ADD TO CART BUTTON */}
             <button onClick={addToCart}>Add to Cart</button>
 
         </div>
