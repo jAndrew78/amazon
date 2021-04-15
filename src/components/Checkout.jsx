@@ -47,6 +47,8 @@ function Checkout() {
         getClientSecret();
     }, [cart])
 
+    console.log('client secret: ', clientSecret)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setProcessing(true);
